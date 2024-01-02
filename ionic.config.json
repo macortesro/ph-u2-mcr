@@ -1,0 +1,7 @@
+{
+  "name": "ph-u2-mcr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
