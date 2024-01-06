@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
-    </ion-title>
+      Citas - MCR
+       </ion-title>
+       <ion-buttons slot="end" class="configuracion-button">
+        <ion-button [routerLink]="['/configuracion']">
+          
+          <ion-icon icon="settings-outline" />
+        
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <p>{{ citaAleatoria }}</p>
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ng-template #noCitasTemplate>
+    <ion-card>
+      <ion-card-content>
+        <p>No hay citas disponibles</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+
+
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['/aplicacion-cita']">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>

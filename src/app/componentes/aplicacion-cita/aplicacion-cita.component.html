@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" />
+      </ion-buttons>
+      <ion-title>
+        CITAS - MCR
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card> 
+<h1 class="ion-text-center" > Crear una nueva cita</h1>
+
+<app-cita-form (onCreate)="onCreateCita($event)"/>
+
+</ion-card>
+
+<ion-card> 
+
+<app-cita-list [citas]="listaCitas" />
+
+</ion-card>

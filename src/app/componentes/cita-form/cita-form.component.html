@@ -1,0 +1,34 @@
+<ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-input 
+      [(ngModel)]="cita.frase" 
+      name="frase"  
+      label="Ingresar Frase" 
+      placeholder="Minimo 5 caracteres" 
+      required="required"
+      minlength="5"
+      #citaInput="ngModel">
+    </ion-input>
+      <div *ngIf="mensajeErrorFrase" class="mensaje-error">{{ mensajeErrorFrase }}</div>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="cita.autor" 
+      name="autor"  
+      label="Ingresar Autor" 
+      placeholder="Minimo 2 caracteres" 
+      required="required"
+      minlength="2"
+      #citaInput="ngModel">
+    </ion-input>
+      <div *ngIf="mensajeErrorAutor" class="mensaje-error">{{ mensajeErrorAutor }}</div>
+    </ion-item>
+  </ion-list>
+
+  <ion-button 
+  (click)="onClick()" 
+  type="ion-button"
+  [disabled]="!citaInput.valid">
+    Agregar +
+  </ion-button>
+</ion-card>

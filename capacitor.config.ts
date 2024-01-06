@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'ph.u2.mcr',
+  appId: 'com.example.app',
   appName: 'ph-u2-mcr',
   webDir: 'www',
   server: {
